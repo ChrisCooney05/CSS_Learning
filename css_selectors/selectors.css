@@ -83,3 +83,8 @@ a:visited:hover {
 a:visited:active {
   color: red;
 }
+
+p:last-of-type {
+  /* only styles the last <p> in EVERY CONTAINER - there is also a :first-of-type */
+  margin-bottom: 50px;
+}
