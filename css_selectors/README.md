@@ -14,3 +14,20 @@ Pseudo-classes begin with a colon followed by the name of the desired class. The
 ### Caveats
 
 Ok, so actually the pseudo-class method is a little more complicated. They’re still a useful tool—as long as you know their ins-and-outs. The :first-of-type and :last-of-type selectors only operate inside their parent element. That is to say, p:first-of-type selects the first &lt;p&gt; in every container element.
+
+### CSS Specificity
+
+Unfortunately, not all CSS selectors are created equal. “CSS specificity” is the weight given to different categories of selectors. This means that certain selectors will always override other ones, regardless of where they appear in the stylesheet.
+<br/>
+ID selectors have higher specificity than class selectors, so this will turn our second button red even though we try to set the background-color with .call-to-action:link later in our stylesheet. The whole “order matters” concept only works when all your rules have the same specificity.
+<img src="https://www.internetingishard.com/html-and-css/css-selectors/css-specificity-and-rule-order-ec25f3.png" width="500px">
+
+The specificity of selectors we’ve seen in this chapter are show below, from greatest to least:
+
+- #button-2
+- .button:link
+- a:link and .synopsis em (they’re equal)
+- .button
+- a
+  
+This can get very confusing. It’s such a big problem that an entire methodology called [“BEM”](http://getbem.com/introduction/) has evolved. BEM attempts to make CSS rules more reusable by making everything a class selector. This completely eliminates the potential for specificity issues.
