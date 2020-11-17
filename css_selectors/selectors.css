@@ -12,7 +12,8 @@
   font-style: normal;
 }
 
-.button {
+.button:link,
+.button:visited {
   color: #fff;
   background-color: #5995da;
   font-weight: bold;
@@ -22,8 +23,23 @@
   border-radius: 5px;
   width: 200px;
   margin: 20px auto; /* auto for width margin will center this element */
+  display: block; /* a tags are inline by default */
+  text-decoration: none;
 }
 
+.button:hover,
+.button:visited:hover {
+  color: #fff;
+  background-color: #76aeed;
+}
+
+.button:active,
+.button:visited:active {
+  color: #fff;
+  background-color: #5995da;
+}
+
+/* currently broken due to .button:link being more specific */
 .call-to-action {
   font-style: italic;
   background-color: #eeb75a;
