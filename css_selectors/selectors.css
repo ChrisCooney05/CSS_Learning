@@ -7,6 +7,10 @@
   color: #7e8184;
   font-style: italic;
 }
+.synopsis em {
+  /* descendant selector - only grabs the em found in synopsis class */
+  font-style: normal;
+}
 
 .button {
   color: #fff;
@@ -18,4 +22,38 @@
   border-radius: 5px;
   width: 200px;
   margin: 20px auto; /* auto for width margin will center this element */
+}
+
+.call-to-action {
+  font-style: italic;
+  background-color: #eeb75a;
+}
+
+/* Pseudo-classes */
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+}
+
+/* if we have visited the site, on hover we get a special colour - breaks a:active though*/
+a:visited:hover {
+  color: orange;
+}
+
+a:visited:active {
+  color: red;
 }
