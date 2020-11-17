@@ -1,4 +1,21 @@
+.page {
+  width: 600px;
+  margin: 0 auto;
+}
+
 .synopsis {
   color: #7e8184;
   font-style: italic;
+}
+
+.button {
+  color: #fff;
+  background-color: #5995da;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid #5d6063;
+  text-align: center;
+  border-radius: 5px;
+  width: 200px;
+  margin: 20px auto; /* auto for width margin will center this element */
 }
