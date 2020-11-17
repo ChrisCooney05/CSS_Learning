@@ -20,6 +20,7 @@ Ok, so actually the pseudo-class method is a little more complicated. They’re 
 Unfortunately, not all CSS selectors are created equal. “CSS specificity” is the weight given to different categories of selectors. This means that certain selectors will always override other ones, regardless of where they appear in the stylesheet.
 <br/>
 ID selectors have higher specificity than class selectors, so this will turn our second button red even though we try to set the background-color with .call-to-action:link later in our stylesheet. The whole “order matters” concept only works when all your rules have the same specificity.
+
 <img src="https://www.internetingishard.com/html-and-css/css-selectors/css-specificity-and-rule-order-ec25f3.png" width="500px">
 
 The specificity of selectors we’ve seen in this chapter are show below, from greatest to least:
