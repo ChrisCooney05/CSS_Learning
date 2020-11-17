@@ -3,6 +3,16 @@ p {
   background-color: #dde0e3;
 }
 
+h1 {
+  padding: 50px;
+  /*adds padding to all sides*/
+}
+
+p {
+  /* padding: 20px 10px; vertical horizontal - shorter than doing all sides individually*/
+  padding: 20px 0 20px 10px; /* top right bottom left */
+}
+
 em,
 strong {
   background-color: #b2d6ff;
