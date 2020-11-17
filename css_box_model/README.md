@@ -6,5 +6,5 @@ The “CSS box model” is a set of rules that determine the dimensions of every
 - **Padding** - The space between the box's content and its border
 - **Border** - The line between the box's padding and margin
 - **Margin** - The space between the box and the surrounding boxes.
-<br/>
+
 ![box_model](https://tutorialehtml.com/assets_tutorials/img/boxmodel.gif)
