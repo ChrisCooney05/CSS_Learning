@@ -6,11 +6,16 @@ p {
 h1 {
   padding: 50px;
   /*adds padding to all sides*/
+  border-bottom: 1px solid #5d6063;
+  /* limit border to base only 1px wide, solid and grey */
 }
 
 p {
   /* padding: 20px 10px; vertical horizontal - shorter than doing all sides individually*/
   padding: 20px 0 20px 10px; /* top right bottom left */
+
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 em,
@@ -19,4 +24,19 @@ strong {
   display: inline;
   /*inline is default, block will make these elements behave 
   like a <p> or <div> element filling screen width*/
+}
+
+strong {
+  margin: 50px;
+  /* margin will ignore top and bottom, padding will increase blue box, but not the grey block size */
+}
+
+div {
+  color: #fff;
+  background-color: #5995da;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5d6063;
+  border-radius: 5px;
 }
