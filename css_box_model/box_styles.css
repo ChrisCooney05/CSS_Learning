@@ -1,3 +1,15 @@
+* {
+  /* removes the white border around the web page */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* best practice to reset default styles before adding new styles * = universal css selector */
+}
+
+body {
+  text-align: center; /*only aligns content in blocks, not the blocks themselves*/
+}
+
 h1,
 p {
   background-color: #dde0e3;
@@ -41,5 +53,6 @@ div {
   border-radius: 5px;
 
   width: 200px;
-  box-sizing: border-box; /*div size is 200px not the content with padding and margin added after*/
+  box-sizing: border-box; /*div size is 200px not the content with padding and margin added after */
+  margin: 20px auto; /* vertical horizontal - auto will center the div - only works due to width being set */
 }

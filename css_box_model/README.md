@@ -9,8 +9,16 @@ The “CSS box model” is a set of rules that determine the dimensions of every
 
 ![box_model](https://www.internetingishard.com/html-and-css/css-box-model/css-box-model-73a525.png)
 
-# Content Boxes and Border Boxes
+### Content Boxes and Border Boxes
 
 The width and height properties only define the size of a box’s content. Its padding and border are both added on top of whatever explicit dimensions you set. Fortunately, CSS lets you change how the width of a box is calculated via the box-sizing property.
 
 ![content_box](https://www.internetingishard.com/html-and-css/css-box-model/box-sizing-content-box-09f48a.png)
+
+### Summary
+
+- Everything is a box.
+- Boxes can be inline or block-level.
+- Boxes have content, padding, borders, and margins.
+- They also have seemingly arbitrary rules about how they interact.
+- Mastering the CSS box model means you can lay out most web pages.
