@@ -36,4 +36,10 @@ Percentages in CSS are relative to the width of the parent element. The result i
 
 <img src="https://www.internetingishard.com/html-and-css/floats/floats-for-columns-8a52b0.png" width="400px">
 
-When there isn’t enough room to stack a floated element horizontally, it pops down to the next line. By removing the implicit height of the footer and adding ```overflow: hidden``` it will scale to accommodate as many .column elements as we want 
+When there isn’t enough room to stack a floated element horizontally, it pops down to the next line. By removing the implicit height of the footer and adding ```overflow: hidden``` it will scale to accommodate as many .column elements as we want.
+
+### Overflow with content
+
+When adding content to an element that contains a float, everything will wrap around it, in a magazine style. If we want to avoid this, we need to use ```overflow: hidden``` just like in the .comment div. This will “horizontally cleared” the floated image. Without it, the last line of the .comment text would hang underneath the image.
+
+<img src="https://www.internetingishard.com/html-and-css/floats/no-overflow-hidden-for-content-1cb097.png" width="400px">
