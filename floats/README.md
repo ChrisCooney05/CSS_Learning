@@ -20,6 +20,11 @@ When you float multiple elements in the same direction, they’ll stack horizont
 ### After a Float
 
 As both the sidebar and content have been floated, they are removed from the normal flow of the page, so the footer is now pressed up against the menu div or the last element that was not floated. <br/>
-Clearing a float is when we tell a block to ignore any floats that appear before it. It’s like forcing a box back into the default vertical flow of the page.
+Clearing a float is when we tell a block to ignore any floats that appear before it. It’s like forcing a box back into the default vertical flow of the page. Done by setting ```clear: both``` to the .footer element.
 
 <img src="https://www.internetingishard.com/html-and-css/floats/clearing-a-float-44a4d5.png" width="400px">
+
+Clearing floats only fixes the height issue when there’s an element inside the container element that we can add a clear property to. With the footer now outside of the .page container the .page container has a 0 height issue. <br/>
+By adding ```overflow: hidden``` we’re telling it to recognize the height of any floated elements it contains. this is how the grey background shows up instead of just white.
+<br/>
+when you have an extra unfloated HTML element at the bottom of a container div, use the ```clear``` solution. Otherwise, add an ```overflow: hidden``` declaration to the container element.
