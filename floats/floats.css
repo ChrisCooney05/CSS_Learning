@@ -7,6 +7,7 @@
 .page {
   width: 1200px;
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 .menu {
@@ -22,11 +23,14 @@
 }
 
 .content {
+  float: left;
+  width: 650px;
   height: 500px;
   background-color: #f5cf8e;
 }
 
 .footer {
+  clear: both; /* clear left and right floats so the footer remains under the content and sidebar elements*/
   height: 200px;
   background-color: #d6e9fe;
 }
