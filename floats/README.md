@@ -1,0 +1,3 @@
+# Floats
+
+Floats” let you put block-level elements side-by-side instead of on top of each other. This is a big deal. It lets us build all sorts of layouts, including sidebars, multi-column pages, grids, and magazine-style articles with text flowing around an image. This is where we finally start creating real web pages. Float-based layouts have mostly been replaced with Flexbox in modern websites. Perhaps more importantly, the limited nature of floats makes them a gentler introduction to CSS layouts than Flexbox.
