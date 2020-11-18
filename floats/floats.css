@@ -4,11 +4,14 @@
   box-sizing: border-box;
 }
 
+.container {
+  overflow: hidden;
+  background-color: #eaedf0;
+}
+
 .page {
   width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
-  background-color: #eaedf0;
 }
 
 .menu {
@@ -32,6 +35,14 @@
 
 .footer {
   clear: both; /* clear left and right floats so the footer remains under the content and sidebar elements*/
-  height: 200px;
   background-color: #d6e9fe;
+  overflow: hidden;
+}
+
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%; /* % makes the columns more reactive*/
+  height: 160px;
+  background-color: #b2d6ff;
 }

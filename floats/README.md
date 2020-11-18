@@ -28,3 +28,12 @@ Clearing floats only fixes the height issue when there’s an element inside the
 By adding ```overflow: hidden``` we’re telling it to recognize the height of any floated elements it contains. this is how the grey background shows up instead of just white.
 <br/>
 when you have an extra unfloated HTML element at the bottom of a container div, use the ```clear``` solution. Otherwise, add an ```overflow: hidden``` declaration to the container element.
+<br/>
+
+### Floats for Columns
+
+Percentages in CSS are relative to the width of the parent element. The result is three columns that automatically resize to one-third of the browser window.
+
+<img src="https://www.internetingishard.com/html-and-css/floats/floats-for-columns-8a52b0.png" width="400px">
+
+When there isn’t enough room to stack a floated element horizontally, it pops down to the next line. By removing the implicit height of the footer and adding ```overflow: hidden``` it will scale to accommodate as many .column elements as we want 
