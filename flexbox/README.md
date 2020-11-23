@@ -74,3 +74,20 @@ By setting the first-item property ```order: 1``` and the last-item property ```
 ### Flex Item Alignment
 
 We can also align items individually using the ```align-self``` property. Adding this to a flex item overrides the ```align-items``` value from its container. By adding ```align-self: flex-end``` to ```.social, .subscribe``` sends them to the bottom of the ```.header``` element. Note margins and padding work as expected. You can used the same values outlined in [align-items](#cross-axis-vertical-alignment)
+
+### Item Flex
+
+Flex items are flexible: they can shrink and stretch to match the width of their containers. The ```Flex``` property defines the width of individual items in a flex container. Or, more accurately, it allows them to have flexible widths. It works as a weight that tells the flex container how to distribute extra space to each item. For example, an item with a flex value of 2 will grow twice as fast as items with the default value of 1.
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flexible-items-cfe7a3.png" width="400px">
+
+Compare this to the ```justify-content``` property, which distributes extra space between items. This is similar, but now we’re distributing that space into the items themselves. The result is full control over how flex items fit into their containers.
+<br/>
+We can even mix-and-match flexible boxes with fixed-width ones. ```flex: initial``` falls back to the item’s explicit width property. This lets us combine static and flexible boxes in complex ways.
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/combining-flexible-and-static-items-52aacb.png" width="400px">
+
+
+Because of the ```flex: initial``` in ```.footer-one, .footer-three``` the ```flex: 1``` property is ignored so we can set a sttic width for both elements. because of this when re sizing the page, the dark blue boxes will never change size, whilst the light blue box will. 
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/footer-flexible-items-static-widths-af0a32.png" width="400px">
