@@ -27,3 +27,19 @@ The next job is to define the horizontal alignment of the items, this is done wi
 Flex containers only know how to position elements that are one level deep (i.e., their child elements). They don’t care one bit about what’s inside their flex items. Wrapping a bunch of items in an extra &lt;div&gt; results in a totally different web page.
 
 <img src="https://www.internetingishard.com/html-and-css/flexbox/grouping-flex-items-1bb642.png" width="400px">
+
+
+### Cross-Axis (Vertical) Alignment
+
+Flex containers can also define the vertical alignment of their items. Since ```.header``` has an explicit height, items can be positioned vertically inside of it. The official specification calls this “cross-axis” alignment but it might as well be called “vertical” alignment. Vertical alignment is defined by adding an ```align-items``` property to a flex container. Adding ```align-items: center``` moves the content into the middle of our 300px height element
+<br/>
+```align-items``` values are:
+  - center
+  - flex-start (top)
+  - flex-end (bottom)
+  - stretch
+  - baseline
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flex-align-items-26abfd.png" width="400px">
+
+stretch is interesting as The box for each item extends the full height of the flex container, regardless of how much content it contains. A common use case for this behavior is creating equal-height columns with a variable amount of content in each one—something very difficult to do with floats.
