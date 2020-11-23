@@ -69,4 +69,8 @@ The flex-direction property also offers you control over the order in which item
 
 Adding an ```order``` property to a flex item defines its order in the container without affecting surrounding items. Its default value is 0, and increasing or decreasing it from there moves the item to the right or left, respectively.
 <br/>
-By setting the first-item property ```order: 1``` and the last-item property ```order: -1``` we can swap them without effecting the other images stored on the page
+By setting the first-item property ```order: 1``` and the last-item property ```order: -1``` we can swap them without effecting the other images stored on the page.
+
+### Flex Item Alignment
+
+We can also align items individually using the ```align-self``` property. Adding this to a flex item overrides the ```align-items``` value from its container. By adding ```align-self: flex-end``` to ```.social, .subscribe``` sends them to the bottom of the ```.header``` element. Note margins and padding work as expected. You can used the same values outlined in [align-items](#cross-axis-vertical-alignment)
