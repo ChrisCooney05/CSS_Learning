@@ -43,3 +43,12 @@ Flex containers can also define the vertical alignment of their items. Since ```
 <img src="https://www.internetingishard.com/html-and-css/flexbox/flex-align-items-26abfd.png" width="400px">
 
 stretch is interesting as The box for each item extends the full height of the flex container, regardless of how much content it contains. A common use case for this behavior is creating equal-height columns with a variable amount of content in each one—something very difficult to do with floats.
+
+### Wrapping items
+
+Flexbox is a more powerful alternative to float-based grids. Not only can it render items as a grid—it can change their alignment, direction, order, and size, using the ```flex-wrap property```.
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flex-wrap-b960c1.png" width="400px">
+
+
+By adding ```flex-wrap: wrap``` property, any items that don't fit horizontally get bumped down to the next row. Now, our flex items behave much like floated boxes, except flexbox gives us more control over how “extra” items are aligned in the final row via the ```justify-content``` property.
