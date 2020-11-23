@@ -91,3 +91,20 @@ We can even mix-and-match flexible boxes with fixed-width ones. ```flex: initial
 Because of the ```flex: initial``` in ```.footer-one, .footer-three``` the ```flex: 1``` property is ignored so we can set a sttic width for both elements. because of this when re sizing the page, the dark blue boxes will never change size, whilst the light blue box will. 
 
 <img src="https://www.internetingishard.com/html-and-css/flexbox/footer-flexible-items-static-widths-af0a32.png" width="400px">
+
+### Flex and Auto Margins
+
+Auto-margins in flexbox are special. They can be used as an alternative to an extra &lt;div&gt; when trying to align a group of items to the left/right of a container. Think of auto-margins as a “divider” for flex items in the same container.
+<br/>
+By removing the div containing the ```.signup``` and ```.login``` elements, everything is evenly spaced across the flex container. by setting ```margin-left: auto``` on the ```.signup``` element the auto-margins eat up all the extra space in a flex container, so instead of distributing items equally, this moves the .```signup``` and any following items (```.login```) to the right side of the container.
+
+### Summary 
+
+- Use ```display: flex;``` to create a flex container.
+- Use ```justify-content``` to define the horizontal alignment of items.
+- Use ```align-items``` to define the vertical alignment of items.
+- Use ```flex-direction``` if you need columns instead of rows.
+- Use the ```row-reverse``` or ```column-reverse``` values to flip item order.
+- Use ```order``` to customize the order of individual elements.
+- Use ```align-self``` to vertically align individual items.
+- Use ```flex``` to create flexible boxes that can stretch and shrink.

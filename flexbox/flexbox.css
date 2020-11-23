@@ -23,6 +23,10 @@
   margin-left: 20px;
 }
 
+.signup {
+  margin-left: auto;
+}
+
 .links {
   display: flex;
   justify-content: flex-end;
@@ -41,6 +45,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
 
 .photo-grid-container {
@@ -68,12 +78,6 @@
 
 .last-item {
   order: -1;
-}
-
-.social,
-.subscribe {
-  align-self: flex-end;
-  margin-bottom: 20px;
 }
 
 .footer {
