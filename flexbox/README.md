@@ -52,3 +52,11 @@ Flexbox is a more powerful alternative to float-based grids. Not only can it ren
 
 
 By adding ```flex-wrap: wrap``` property, any items that don't fit horizontally get bumped down to the next row. Now, our flex items behave much like floated boxes, except flexbox gives us more control over how “extra” items are aligned in the final row via the ```justify-content``` property.
+
+### Flex Container Direction
+
+“Direction” refers to whether a container renders its items horizontally or vertically. So far, all the containers we’ve seen use the default horizontal direction, ```flex-direction``` can change this from row (horizontal) to column (vertical).
+<br/>
+When you rotate the direction of a container, you also rotate the direction of the justify-content property (clock-wise). It now refers to the container’s vertical alignment—not its horizontal alignment.
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flex-direction-axes-b30e85.png" width="400px">
