@@ -19,3 +19,11 @@ The next job is to define the horizontal alignment of the items, this is done wi
   - space-around
   - space-between
 
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flex-justify-content-alignment-ea129c.png" width="400px">
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flex-justify-content-distribution-b0ee9c.png" width="400px">
+
+### Grouping elements
+
+Flex containers only know how to position elements that are one level deep (i.e., their child elements). They don’t care one bit about what’s inside their flex items. Wrapping a bunch of items in an extra &lt;div&gt; results in a totally different web page.
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/grouping-flex-items-1bb642.png" width="400px">

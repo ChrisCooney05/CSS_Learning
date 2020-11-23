@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .menu-container {
@@ -13,6 +14,16 @@
 }
 
 .menu {
-  border: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
   width: 900px;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
 }
