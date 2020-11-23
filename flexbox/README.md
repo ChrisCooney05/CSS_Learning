@@ -60,3 +60,13 @@ By adding ```flex-wrap: wrap``` property, any items that don't fit horizontally 
 When you rotate the direction of a container, you also rotate the direction of the justify-content property (clock-wise). It now refers to the container’s vertical alignment—not its horizontal alignment.
 
 <img src="https://www.internetingishard.com/html-and-css/flexbox/flex-direction-axes-b30e85.png" width="400px">
+
+The flex-direction property also offers you control over the order in which items appear via the ```row-reverse``` and ```column-reverse``` properties.
+
+<img src="https://www.internetingishard.com/html-and-css/flexbox/flex-direction-reverse-532d8f.png" width="400px">
+
+### Flex Item Order
+
+Adding an ```order``` property to a flex item defines its order in the container without affecting surrounding items. Its default value is 0, and increasing or decreasing it from there moves the item to the right or left, respectively.
+<br/>
+By setting the first-item property ```order: 1``` and the last-item property ```order: -1``` we can swap them without effecting the other images stored on the page
