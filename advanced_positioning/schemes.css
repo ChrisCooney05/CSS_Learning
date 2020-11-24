@@ -4,3 +4,25 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+body {
+  height: 1200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.example {
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+  margin: 50px 0;
+  background-color: #d6e9fe;
+}
+
+/* select img elements within .item class*/
+.item img {
+  display: block;
+}
