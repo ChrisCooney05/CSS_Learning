@@ -42,3 +42,9 @@ Animation is one of the primary use cases for relative and absolute positioning.
 <img src="https://www.internetingishard.com/html-and-css/advanced-positioning/animated-relative-positioning-193400.png" width="400px">
 
 If you were to try to achieve the same effect by manipulating the ```margin``` or ```padding``` properties, you would inadvertently move the statically positioned boxes and/or the containing ```.example``` element, too.
+
+# Positioned Elements For Menus 
+
+The following relates to the code within menu.html/css. 
+<br/>
+Fixed positioning will let us make the menu stick to the top of the page, and relative positioning will give us an anchor for the absolutely positioned dropdown. Navigation menus should almost always be marked up as a &lt;ul&gt; list instead of a bunch of &lt;div&gt; elements. These semantics make your site’s navigation much more accessible to search engines.
