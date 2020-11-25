@@ -58,3 +58,13 @@ By adding another &lt;ul&gt; element within the Features &lt;li&gt; we provides 
 The submenu itself is styled correctly, but it’s showing up in the wrong place and severely messing up the rest of our top-level menu items. This should be expected because it’s still statically positioned, which means it still interacts with its parent and surrounding elements. We want our other top-level menu items to display just like they did before we added the submenu, as if the submenu wasn’t even there. This can be achieved using ```position: absolute;``` on ```.features-menu ```. Doing this makes the dropdown show in the top left corner of the screen, this is because the parent element is not relatively positioned. As the submenu resides in the &lt;li class='dropdown'&gt; we can set ```position: relative``` on the ```.dropdown``` to get it in the right spot, but not fully there.
 
 <img src="https://www.internetingishard.com/html-and-css/advanced-positioning/submenu-relative-and-absolute-positioning-9fe8a5.png" width="400px">
+
+### Z-Index
+
+The ```z-index``` property lets you control the depth of elements on the page. If you think of your screen as 3D space, negative values go farther into the page, and positive ones come out of the page.
+
+<img src="https://www.internetingishard.com/html-and-css/advanced-positioning/css-z-index-c87ef0.png" width="400px">
+
+By setting the ```z-index ``` of ```.features-menu``` to 1 and ```.dropdown > span``` to 2 we can lift the text above the submenu. Take note of that ```position: relative;``` line. It’s required because only positioned elements pay attention to their z-index property.
+
+<img src="https://www.internetingishard.com/html-and-css/advanced-positioning/submenu-with-z-index-f458d3.png" width="400px">
