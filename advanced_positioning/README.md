@@ -34,3 +34,11 @@ We’re using relative positioning of ```.absolute``` for the sole purpose of le
 ### Fixed Positioning
 
 “Fixed positioning” has a lot in common with absolute positioning: it’s very manual, the element is removed from the normal flow of the page, and the coordinate system is relative to the entire browser window. The key difference is that fixed elements don’t scroll with the rest of the page.
+
+### Positioned Elements for Animation 
+
+Animation is one of the primary use cases for relative and absolute positioning. These advanced positioning schemes allow JavaScript to move elements around while avoiding any kind of interaction with surrounding elements. The JavaScript code creates a simple animation that continually updates the ```left``` property of the ```.item-relative```. 
+
+<img src="https://www.internetingishard.com/html-and-css/advanced-positioning/animated-relative-positioning-193400.png" width="400px">
+
+If you were to try to achieve the same effect by manipulating the ```margin``` or ```padding``` properties, you would inadvertently move the statically positioned boxes and/or the containing ```.example``` element, too.

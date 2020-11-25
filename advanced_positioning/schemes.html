@@ -32,5 +32,19 @@
     </div>
   </div>
     
+  <script>
+    let left = 0 
+
+    const frame = () => {
+      const element = document.querySelector('.item-relative');
+      left += 2
+      element.style.left = `${left}px`
+      if (left >= 300) {
+        clearInterval(id)
+      }
+    }
+
+    let id = setInterval(frame, 10)
+  </script>
 </body>
 </html>
