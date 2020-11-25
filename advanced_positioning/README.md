@@ -16,3 +16,17 @@ The ```bottom``` and ```right``` properties measure from the original box’s to
 <img src="https://www.internetingishard.com/html-and-css/advanced-positioning/relative-positioning-offsets-494268.png" width="400px">
 
 Note that these properties accept negative values, which means there’s two ways to specify the same offset. We could just as easily used ```top: -30px;``` in place of ```bottom: 30px;```.
+
+### Absolute Positioning 
+
+“Absolute positioning” is just like relative positioning, but the offset is relative to the entire browser window instead of the original position of the element. Since there’s no longer any relationship with the static flow of the page, consider this the most manual way to lay out an element.
+
+<img src="https://www.internetingishard.com/html-and-css/advanced-positioning/absolute-positioning-screenshot-641ad7.png" width="400px">
+
+The other interesting effect of ```absolute``` is that it completely removes an element from the normal flow of the page. In our relative positioning example (the first row), there’s still a space where the positioned element used to be, but with absolute positioning, that space has vanished. It’s as if ```.item-absolute``` doesn’t even exist to its parent and surrounding elements.
+<br/>
+Absolute positioning becomes much more practical when it’s relative to some other element that is in the static flow of the page. Coordinates for absolute elements are always relative to the closest container that is a positioned element. It only falls back to being relative to the browser when none of its ancestors are positioned. So, if we change ```.item-absolute```’s parent element to be relatively positioned, it should appear in the top-left corner of that element instead of the browser window.
+<br/>
+We’re using relative positioning of ```.absolute``` for the sole purpose of letting our absolute element hook back into the normal flow of the page. This is how we safely combine absolute positioning with static positioning.
+
+<img src="https://www.internetingishard.com/html-and-css/advanced-positioning/relatively-absolute-positioning-screenshot-98bcce.png" width="400px">
