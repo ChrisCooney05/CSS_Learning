@@ -68,3 +68,8 @@ The ```z-index``` property lets you control the depth of elements on the page. I
 By setting the ```z-index ``` of ```.features-menu``` to 1 and ```.dropdown > span``` to 2 we can lift the text above the submenu. Take note of that ```position: relative;``` line. It’s required because only positioned elements pay attention to their z-index property.
 
 <img src="https://www.internetingishard.com/html-and-css/advanced-positioning/submenu-with-z-index-f458d3.png" width="400px">
+
+
+### Pseudo-Classed For Dropdowns
+
+First, we need to change our existing ```.features-menu``` rule to only show the submenu when the user hovers over it by adding a ```:hover``` descendant selector. Then, we need to initially hide the submenu using the ```display``` property. Setting ```display``` to ```none``` makes an element completely disappear. By overriding that value with ```flex``` in the ```:hover``` rule, we’re effectively telling the browser to show the .```features-menu``` again.
