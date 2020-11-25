@@ -30,3 +30,7 @@ Absolute positioning becomes much more practical when it’s relative to some ot
 We’re using relative positioning of ```.absolute``` for the sole purpose of letting our absolute element hook back into the normal flow of the page. This is how we safely combine absolute positioning with static positioning.
 
 <img src="https://www.internetingishard.com/html-and-css/advanced-positioning/relatively-absolute-positioning-screenshot-98bcce.png" width="400px">
+
+### Fixed Positioning
+
+“Fixed positioning” has a lot in common with absolute positioning: it’s very manual, the element is removed from the normal flow of the page, and the coordinate system is relative to the entire browser window. The key difference is that fixed elements don’t scroll with the rest of the page.
