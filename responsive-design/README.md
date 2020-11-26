@@ -54,3 +54,11 @@ The only difference between the mobile and tablet mockups is that the Sign Up an
 <img src="https://www.internetingishard.com/html-and-css/responsive-design/tablet-layout-081d9e.png" width="400px">
 
 Again, it doesn’t matter what the exact width of the screen is: this layout will fluidly respond to any width in the media query’s range.
+
+### Desktop Layout
+
+We don’t want our web page to expand endlessly, so we’re going to give it a fixed width and center it with auto-margins. As with tablet styles, this needs to go into a media query. Finally, the desktop layout calls for some reordering: the Sign Up and Content boxes should appear underneath all the Feature sections.
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-design/desktop-layout-8479d0.png" width="400px">
+
+Finally, we can use flexbox's ```order``` property, to correctly order our page. by setting ```.sign-up``` to ```order: 1``` and ```.content``` to ```order: 2``` we can easily reorder the page without effecting all elements. 

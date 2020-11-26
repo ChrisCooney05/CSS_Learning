@@ -48,11 +48,11 @@
 }
 
 /* Mobile screen */
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
   body {
     background-color: #f09a9d;
   }
-}
+} */
 
 /* Tablet screen */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -66,7 +66,27 @@
 
 /* Desktop screen */
 @media only screen and (min-width: 961px) {
-  body {
-    background-color: #b2d6ff;
+  .page {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .feature-1,
+  .feature-2,
+  .feature-3 {
+    width: 33.3%;
+  }
+
+  .header {
+    height: 400px;
+  }
+
+  .sign-up {
+    height: 200px;
+    order: 1;
+  }
+
+  .content {
+    order: 2;
   }
 }
