@@ -37,4 +37,12 @@ Fluid layouts let us target a range of screen widths instead of specific mobile 
 
 In other words, the exact pixel values for the min-width and max-width parameters in a media query (collectively known as the “breakpoints” for a responsive website) don’t actually matter. Our website doesn’t care about the specific device the user is on. All it needs to know is that it should display a layout that looks pretty at 400 pixels wide (or whatever).
 
+### Mobile-First Development
 
+It’s always a good idea to start with the mobile layout and work your way up to the desktop version. Desktop layouts are typically more complex than their mobile counterparts, and this “mobile-first” approach maximizes the amount of CSS that you can reuse across your layouts.
+<br/>
+By adding base styles outside of the media queries and making the screen smaller we already have the mobile layout done. No media queries required. That’s why it’s called “mobile-first”—the mobile version doesn’t require any special handling.   
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-design/mobile-layout-55fdad.png" width="400px">
+
+By keeping these base styles outside of the media queries, we’re able to override and add on to them as we implement our specific layouts. This is really convenient when, for instance, your designer wants to tweak the color scheme for the entire website. Instead of tracking down redundant ```background-color``` declarations in several ```@media``` rules, you only have to update it here. That change automatically applies to the mobile, tablet, and desktop layouts.
