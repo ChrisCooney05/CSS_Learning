@@ -46,3 +46,11 @@ By adding base styles outside of the media queries and making the screen smaller
 <img src="https://www.internetingishard.com/html-and-css/responsive-design/mobile-layout-55fdad.png" width="400px">
 
 By keeping these base styles outside of the media queries, we’re able to override and add on to them as we implement our specific layouts. This is really convenient when, for instance, your designer wants to tweak the color scheme for the entire website. Instead of tracking down redundant ```background-color``` declarations in several ```@media``` rules, you only have to update it here. That change automatically applies to the mobile, tablet, and desktop layouts.
+
+### Tablet Layout
+
+The only difference between the mobile and tablet mockups is that the Sign Up and Feature sections form a 2×2 grid instead of a single column. Because of ```.page``` having the ```flex-wrap: wrap``` property, this will be easy to add. By Simply adjusting the widths of the flex items to be half the screen and ```flex-wrap``` will take care of the rest. This should only apply to tablets so needs to go in a ```@media``` rule. 
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-design/tablet-layout-081d9e.png" width="400px">
+
+Again, it doesn’t matter what the exact width of the screen is: this layout will fluidly respond to any width in the media query’s range.

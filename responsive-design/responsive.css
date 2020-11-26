@@ -47,18 +47,24 @@
   background-color: #c8c6fa;
 }
 
+/* Mobile screen */
 @media only screen and (max-width: 400px) {
   body {
     background-color: #f09a9d;
   }
 }
 
+/* Tablet screen */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    background-color: #f5cf8e;
+  .sign-up,
+  .feature-1,
+  .feature-2,
+  .feature-3 {
+    width: 50%;
   }
 }
 
+/* Desktop screen */
 @media only screen and (min-width: 961px) {
   body {
     background-color: #b2d6ff;
