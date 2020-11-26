@@ -17,3 +17,24 @@ Media queries always begin with the @media “at-rule” followed by some kind o
 <img src="https://www.internetingishard.com/html-and-css/responsive-design/media-query-terms-137d06.png" width="400px">
 
 The ```only screen``` “media type” means that the contained styles should only be applied to devices with screens (opposed to printed documents, like when you hit Cmd+P in a browser). The ```min-width``` and ```max-width``` parts are called “media features”, and they specify the device dimensions you’re targeting. Whilst these are the most common, there are [loads more](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) including whether the device is in portrait or landscape mode, the resolution of its screen, and whether it has a mouse or not.
+
+There’s a few well [defined patterns](https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns?hl=en) for how a desktop layout collapses into a mobile layout (ours is “layout shifter”) and there are two concepts that you must understand as a developer:
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-design/mobile-first-design-be30e4.png" width="400px">
+
+- A “fluid” layout is one that stretches and shrinks to fill the width of the screen, just like the flexible boxes we covered a few chapters ago.
+- A “fixed-width” layout is the opposite: it has the same width regardless of the screen dimensions 
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-design/fixed-width-vs-fluid-layouts-258df9.png" width="400px">
+
+In responsive.html the mobile and tablet versions are fluid, and the desktop version is fixed-width.
+
+### Note on Breakpoints
+
+Most of those responsive design patterns have similar behavior, using fluid layouts for mobile/tablet devices and fixed-width layouts for wider screens. There’s a reason for this.
+
+Fluid layouts let us target a range of screen widths instead of specific mobile devices. This is very important for web designers. When they set out to create a mobile layout, they aren’t trying to make something that looks good on an iPhone 6s, Galaxy S7, or iPad mini—they’re designing a fluid layout that looks good anywhere between 300 pixels and 500 pixels (or whatever).
+
+In other words, the exact pixel values for the min-width and max-width parameters in a media query (collectively known as the “breakpoints” for a responsive website) don’t actually matter. Our website doesn’t care about the specific device the user is on. All it needs to know is that it should display a layout that looks pretty at 400 pixels wide (or whatever).
+
+
