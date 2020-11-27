@@ -51,3 +51,21 @@ The ```srcset``` attribute points to a list of alternative image files, along wi
 <img src="https://www.internetingishard.com/html-and-css/responsive-images/retina-responsive-images-with-srcset-707397.png" width="400px">
 
 Typically, the low-res and high-res versions of an image would be the exact same (except for their dimensions), but we made illustration-small.png yellow so you can easily differentiate it from the retina version, which is blue.
+
+### Screen Width Optimization Using srcset
+
+The above srcset technique misses an important use case for larger images: if the user has a retina smartphone, it’ll download the high-resolution image even when the standard version would suffice.
+<br/>
+Imagine that we wanted to display a big photo in our .header element. The header is 960 pixels wide in our desktop layout, so our photo needs to be at least 1920 pixels wide to display well on retina screens. Now, consider a smartphone with a retina screen. Smartphones are typically less than 400 pixels wide in portrait mode, which means that the corresponding retina-quality image would only need to be 800(ish) pixels wide.
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-images/screen-width-optimization-with-srcset-6dd918.png" width="400px">
+
+The lesson here is that we want to optimize larger images based on their final rendered dimensions, not just the device’s screen resolution.
+<br/>
+We have the same ```srcset``` element as the last section, but instead of the 1x and 2x descriptors, we’re providing the inherent physical width of the image. The ```2000w``` tells the browser that the ```photo-big.jpg``` file is 2000 pixels wide. Likewise, the ```1000w``` means ```photo-small.jpg``` has a width of 1000 pixels. The w character is a special unit used only for this kind of image optimization scenario.
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-images/img-srcset-physical-width-2153b0.png" width="400px">
+
+Image width alone isn’t enough for a device to determine which image it should load. We also need to tell it what the final rendered width of the image will be. That’s where the ```sizes``` attribute comes in. It defines a series of media queries along with the image’s rendered width when that media query is in effect. In our ```.header``` &lt;img&gt; we’re saying that when the screen is at least ```960px``` wide, the image will also be 960 pixels wide. Otherwise, the ```100vw``` default value tells the browser that the image’s width will be 100% of the “viewport width” (a fancy term for screen width).
+<br/>
+Remember that our low-resolution photo is 1000 pixels wide, which means that 2x retina devices can use it as long as their screen is less than 500 pixels wide. We’re now serving a 115KB image to mobile devices instead of forcing them to use the high-res 445KB image. That’s a big deal, especially for websites that use a lot of photos.
