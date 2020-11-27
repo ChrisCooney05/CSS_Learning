@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* No mobile media query needed for mobile first development */
 .page {
   display: flex;
   flex-wrap: wrap;
@@ -48,14 +47,6 @@
   background-color: #c8c6fa;
 }
 
-/* Mobile screen */
-/* @media only screen and (max-width: 400px) {
-  body {
-    background-color: #f09a9d;
-  }
-} */
-
-/* Tablet screen */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   .sign-up,
   .feature-1,
@@ -65,7 +56,6 @@
   }
 }
 
-/* Desktop screen */
 @media only screen and (min-width: 961px) {
   .page {
     width: 960px;
