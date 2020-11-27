@@ -67,6 +67,5 @@ Finally, we can use flexbox's ```order``` property, to correctly order our page.
 
 Before responsive design was a thing, mobile devices only had a desktop layout to work with. To cope with this, they zoomed out to fit the entire desktop layout into the width of the screen, letting the user interact with it by zooming in when necessary. This default behavior will prevent mobile devices from using our mobile layout. To disable it, add the following element to the &lt;head&gt; of our document.
 ```html
-<meta name='viewport'
-      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 ```

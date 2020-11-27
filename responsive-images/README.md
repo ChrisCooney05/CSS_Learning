@@ -11,3 +11,15 @@ Retina screens have twice as many pixels per inch than standard-resolution scree
 This is actually a bit of a simplification—not all retina screens are created equal. For instance, the iPhone 6 Plus has three times as many pixels per inch as a standard screen, but the same techniques apply to 3x retina screens as well.
 <br/>
 What’s more, standard displays and smaller devices don’t need all those extra pixels in high-resolution images, and sending that much unnecessary data usually results in a bad user experience.
+
+### Responsive SVG
+
+The easiest way to solve all these problems is with SVG images. They “just work.” Since they’re vector-based, SVGs avoid screen resolution problems. Browsers automatically scale up SVGs for retina devices, so this 500×250 pixel SVG image will render crisply on both standard and retina devices.
+<br/>
+SVGs let us forget about screen resolution issues, but we do need to shrink the illustration to fit neatly into our fluid tablet and mobile layouts. Firefox will do this automatically, but if you open this page with Chrome and make your browser very narrow, you’ll find that the image stays the same size.
+<br/>
+When we specify 100% width on an image, it’ll assume we want to maintain its aspect ratio and calculate its height automatically. This fixes the mobile layout, but now the desktop version is huge:
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-images/responsive-svg-image-bfa291.png" width="400px">
+
+We can cap the size of the image at ```500px``` with an inline style. This is one of the rare times an inline style is acceptable, due to the fact that it’s describing an innate property of the image. An image’s physical dimensions are more content than presentation, so it makes sense for this to appear in the HTML rather than the stylesheet.
