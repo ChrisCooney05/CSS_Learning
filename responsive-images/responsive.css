@@ -47,8 +47,9 @@
   background-color: #c8c6fa;
 }
 
-.illustration {
+.illustration img {
   width: 100%;
+  display: block;
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
