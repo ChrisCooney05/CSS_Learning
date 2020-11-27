@@ -62,6 +62,18 @@ Imagine that we wanted to display a big photo in our .header element. The header
 
 The lesson here is that we want to optimize larger images based on their final rendered dimensions, not just the device’s screen resolution.
 <br/>
+```html
+<div class='section header'>
+  <div class='photo'>
+    <img src='images/photo-small.jpg'
+         srcset='images/photo-big.jpg 2000w,
+                 images/photo-small.jpg 1000w'
+         sizes='(min-width: 960px) 960px,
+                100vw'/>
+  </div>
+</div>
+```
+
 We have the same ```srcset``` element as the last section, but instead of the 1x and 2x descriptors, we’re providing the inherent physical width of the image. The ```2000w``` tells the browser that the ```photo-big.jpg``` file is 2000 pixels wide. Likewise, the ```1000w``` means ```photo-small.jpg``` has a width of 1000 pixels. The w character is a special unit used only for this kind of image optimization scenario.
 
 <img src="https://www.internetingishard.com/html-and-css/responsive-images/img-srcset-physical-width-2153b0.png" width="400px">
@@ -69,3 +81,28 @@ We have the same ```srcset``` element as the last section, but instead of the 1x
 Image width alone isn’t enough for a device to determine which image it should load. We also need to tell it what the final rendered width of the image will be. That’s where the ```sizes``` attribute comes in. It defines a series of media queries along with the image’s rendered width when that media query is in effect. In our ```.header``` &lt;img&gt; we’re saying that when the screen is at least ```960px``` wide, the image will also be 960 pixels wide. Otherwise, the ```100vw``` default value tells the browser that the image’s width will be 100% of the “viewport width” (a fancy term for screen width).
 <br/>
 Remember that our low-resolution photo is 1000 pixels wide, which means that 2x retina devices can use it as long as their screen is less than 500 pixels wide. We’re now serving a 115KB image to mobile devices instead of forcing them to use the high-res 445KB image. That’s a big deal, especially for websites that use a lot of photos.
+
+### Art Direction using &lt;Picture&gt;
+
+This lets you optimize layouts by sending completely different images to the user depending on their device. Compare this to the previous section, which optimized the same image for different devices. For instance, our header photo is pretty wide. Wouldn’t it be great if we could crop a taller version and present that to mobile devices instead of the wide desktop version?
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-images/art-direction-with-picture-764252.png" width="400px">
+
+For this, we need the &lt;picture&gt; and &lt;source&gt; elements. The former is just a wrapper, and the latter conditionally loads images based on media queries.
+<br/>
+In each &lt;source&gt; element, the ```media``` attribute defines when the image should be loaded, and ```srcset``` defines which image file should be loaded. The &lt;img&gt; element is only used as a fallback for older browsers. You should be able to see the tall version of the photo when you shrink your browser window:
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-images/art-direction-with-picture-764252.png" width="400px">
+
+the trade off is that it doesn’t let the browser automatically pick the optimal image. This means we lost our retina optimization from the previous section: as long as the screen width is 401 pixels or greater, the browser will always use the high-resolution, wide-cropped image.
+
+### Summary
+
+Stick to the 1x and 2x version of ```srcset``` for images less than 600 pixels wide, use the ```srcset``` plus sizes method from the previous section for bigger photos, and reserve &lt;picture&gt; for when you’re trying to do something real fancy.
+<br/>
+Responsive images may seem rather complicated, but there’s really only two problems we’re trying to solve:
+
+- Make images fit into mobile layouts while respecting their intrinsic size
+- Avoid making the user download unnecessarily large image files
+
+We accomplished the former by making images always stretch to fill 100% of their container while limiting their size with an inline ```max-width``` style. For the latter, we used ```srcset``` to optimize for screen resolution, ```srcset``` plus ```sizes``` to optimize for device width, and finally the &lt;picture&gt; element for manual control over which image file is displayed.
