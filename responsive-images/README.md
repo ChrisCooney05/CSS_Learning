@@ -31,3 +31,23 @@ Sometimes you need to include a photo. PNG, GIF, and JPG images are “raster im
 <img src="https://www.internetingishard.com/html-and-css/responsive-images/retina-responsive-images-9f367b.png" width="400px">
 
 This the lazy way to create responsive PNG, GIF, or JPG images, as it assumes everybody needs a high-resolution image, even if they don’t. That is to say, a 1000×500 pixel image is overkill for non-retina devices.
+
+### Responsive Image Optimization
+
+Different devices have different image requirements. Fortunately, HTML provides a way to choose the best image for the user’s device. We’ll take a look at three scenarios for optimizing responsive images:
+
+  - A standard-resolution screen that doesn’t need a retina-quality image.
+  - A retina mobile device that can use a standard-quality image because it’s been scaled down so much.
+  - A desktop layout that uses a wide image, and an associated mobile layout that uses a taller image.
+
+The first method is the easiest, and it’s great for images smaller than 600 pixels wide because they aren’t big enough to benefit from the second scenario. The second method is a very important optimization for larger images, especially full-bleed photos. The third is for when you’re feelin’ fancy.
+
+### Retina Optimization Using srcset
+
+High-resolution images are big. Our ```illustration-big.png``` file takes up more than twice as much disk space as its low-resolution counterpart. It doesn’t make sense to serve all that extra data when the user doesn’t actually need it. Adding a ```srcset``` attribute to our &lt;img/&gt; element lets us present our high-resolution image only to retina devices, falling back to the low-resolution version for standard screens.
+<br/>
+The ```srcset``` attribute points to a list of alternative image files, along with properties defining when the browser should use each of them. The 1x tells the browser to display ```illustration-small.png``` on standard-resolution screens. The 2x means that ```illustration-big.png``` is for retina screens. Older browsers that don’t understand ```srcset``` fall back to the ```src``` attribute.
+
+<img src="https://www.internetingishard.com/html-and-css/responsive-images/retina-responsive-images-with-srcset-707397.png" width="400px">
+
+Typically, the low-res and high-res versions of an image would be the exact same (except for their dimensions), but we made illustration-small.png yellow so you can easily differentiate it from the retina version, which is blue.
