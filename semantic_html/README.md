@@ -129,3 +129,11 @@ The time itself is in 24-hour format, and the ```-0800``` is the time zone offse
 The &lt;address&gt; element is like &lt;time&gt; in that it doesn’t deal with the overall structure of a document, but rather embellishes the parent &lt;article&gt; or &lt;body&gt; element with some metadata. It defines contact information for the author of the article or web page in question. &lt;address&gt; should not be used for arbitrary physical addresses.
 <br/>
 By default, these will be styled the same way as &lt;em&gt;.
+
+### Figures and Captions
+
+Last, but certainly not least, are the &lt;figure&gt; and &lt;figcaption&gt; elements. The former represents a self-contained “figure”, like a diagram, illustration, or even a code snippet. The latter is optional, and it associates a caption with its parent &lt;figure&gt; element. A common use case for both of these is to add visible descriptions to the &lt;img/&gt; elements in an article.
+<br/>
+The alt attribute is closely related to the &lt;figcaption&gt; element. alt should serve as a text replacement for the image, while &lt;figcaption&gt; is a supporting description displayed with either the image or its text-based equivalent.
+<br/>
+When using &lt;figcaption&gt; in the above manner, you can safely omit an image’s ```alt``` attribute without hurting your SEO. Depending on what kind of images you’re working with, it may be more convenient (and less redundant) to have visible &lt;figcaption&gt;’s that describe them opposed to invisible alt attributes.
