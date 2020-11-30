@@ -73,3 +73,11 @@ However, you shouldn’t use the &lt;section&gt; element to manipulate the docum
 Also note that each &lt;section&gt; element should contain at least one heading, otherwise it will add an “untitled section” to your document outline.
 <br/>
 As defined by the HTML5 specification, &lt;section&gt; is a pretty generic element. That, plus the fact that browsers and screen readers can’t properly interpret its role in document outlines makes it difficult to know when and how to leverage it properly. Only use &lt;section&gt; as a more descriptive &lt;Div&gt; wrapper for the implicitly defined sections of your page. Don’t use it for self-contained content (that’s what &lt;article&gt; is for) or when it’s purely for layout purposes.
+
+### Navs
+
+The &lt;nav&gt; element lets you mark up the various navigation sections of your website. This goes for the main site navigation, links to related pages in a sidebar, tables of content, and pretty much any group of links. This is a great piece of semantic information for search engines. It helps them quickly identify the structure of your entire website, making it easier to discover other pages. It’s possible to include multiple &lt;nav&gt; elements on a single page if you have different sets of related links.
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/html-nav-element-d1e716.png" width="400px">
+
+### Headers
