@@ -81,3 +81,11 @@ The &lt;nav&gt; element lets you mark up the various navigation sections of your
 <img src="https://www.internetingishard.com/html-and-css/semantic-html/html-nav-element-d1e716.png" width="400px">
 
 ### Headers
+
+The &lt;header&gt; element denotes introductory content for a section, article, or entire web page. “Introductory content” can be anything from your company’s logo to navigational aids or author information. It’s a best practice to wrap a website’s name/logo and main navigation in a &lt;header&gt;.
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/html-header-element-7b4e01.png" width="400px">
+
+Headers are only associated with the nearest sectioning element—typically a &lt;body&gt;, &lt;section&gt;, or &lt;article&gt; element. This means that you can use multiple &lt;header&gt; elements to add introductory content to different parts of a document. For instance, the title, author, and publication date of our &lt;article&gt;
+<br/>
+Without this &lt;header&gt;, search engines and screen readers wouldn’t know that first &lt;p&gt; was separate from the main content of the article. Like &lt;section&gt;, it also serves as a convenient CSS hook, since the title and author info for a blog post are often styled differently than the rest of the article. Again, think of &lt;header&gt; as a more semantic alternative to a &lt;div&gt; container.
