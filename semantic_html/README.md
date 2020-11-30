@@ -21,3 +21,9 @@ Each &lt;h1&gt; element creates a new section in the document outline, and any l
 <img src="https://www.internetingishard.com/html-and-css/semantic-html/document-outline-section-creation-45ee48.png" width="400px">
 
 How’s this document outline stuff relate to semantic HTML? Well, headings are some of the most semantic things in a web page. They play a significant role in how search engines determine what’s important in your web page. In addition, semantic HTML elements add more meaning to and sometimes even alter the default outlining behavior discussed here.
+
+### Articles 
+
+The &lt;article&gt; element represents an independent article in a web page. It should only wrap content that can be plucked out of your page and distributed in a completely different context. For instance, an app like d[Flipboard](https://flipboard.com/) should be able to grab an &lt;article&gt; element from your site, display it in its own app, and have it make perfect sense to its readers.
+<br/>
+By Wrapping the blog post in an &lt;article&gt; element we are marking it as the main content of the page as a self-contained unit. Notice how we left the copyright notice outside the &lt;article&gt; element because it’s a footer for the entire site—not specifically for our article.
