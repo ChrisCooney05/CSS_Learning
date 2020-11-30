@@ -137,3 +137,14 @@ Last, but certainly not least, are the &lt;figure&gt; and &lt;figcaption&gt; ele
 The alt attribute is closely related to the &lt;figcaption&gt; element. alt should serve as a text replacement for the image, while &lt;figcaption&gt; is a supporting description displayed with either the image or its text-based equivalent.
 <br/>
 When using &lt;figcaption&gt; in the above manner, you can safely omit an image’s ```alt``` attribute without hurting your SEO. Depending on what kind of images you’re working with, it may be more convenient (and less redundant) to have visible &lt;figcaption&gt;’s that describe them opposed to invisible alt attributes.
+
+### CSS/Legacy Browsers
+
+The semantic HTML elements in this chapter were introduced in HTML5. All modern browser recognize them without any extra work, but you’ll often see something like the following in global CSS stylesheets:
+
+```css
+section, article, aside, footer, header, nav {
+  display: block;
+}
+```
+This makes the new semantic elements behave like &lt;div&gt; elements 
