@@ -27,3 +27,28 @@ How’s this document outline stuff relate to semantic HTML? Well, headings are 
 The &lt;article&gt; element represents an independent article in a web page. It should only wrap content that can be plucked out of your page and distributed in a completely different context. For instance, an app like d[Flipboard](https://flipboard.com/) should be able to grab an &lt;article&gt; element from your site, display it in its own app, and have it make perfect sense to its readers.
 <br/>
 By Wrapping the blog post in an &lt;article&gt; element we are marking it as the main content of the page as a self-contained unit. Notice how we left the copyright notice outside the &lt;article&gt; element because it’s a footer for the entire site—not specifically for our article.
+<br/>
+&lt;article&gt;’s are essentially mini web pages in your HTML document. They have their own headers, footers, and document outline that are completely isolated from the rest of your site.
+
+### Using Multiple Article Elements
+
+For things like blog posts, newspaper articles, or web pages dedicated to a single topic, there’s often only one &lt;article&gt; element on the page. But, it’s perfectly legal to have more than one &lt;article&gt; element per page. A good example is a page that displays a bunch of blog posts. Each one of them can be wrapped in a separate set of &lt;article&gt; tags.
+
+```html
+<article>
+  <h1>First Post</h1>
+  <p>Some content</p>
+</article>
+<article>
+  <h1>Second Post</h1>
+  <p>Some more content</p>
+  <h2>Subsection</h2>
+  <p>Some details</p>
+</article>
+<article>
+  <h1>Last Post</h1>
+  <p>Final bit of content</p>
+</article>
+```
+
+This tells anybody looking at our page that there are three distinct articles that can be syndicated. Think of it as a way to merge multiple HTML files into a single document without confusing search engines, browsers, or other machines that are trying to parse our content.
