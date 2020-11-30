@@ -25,7 +25,9 @@ How’s this document outline stuff relate to semantic HTML? Well, headings are 
 ### Articles 
 
 The &lt;article&gt; element represents an independent article in a web page. It should only wrap content that can be plucked out of your page and distributed in a completely different context. For instance, an app like d[Flipboard](https://flipboard.com/) should be able to grab an &lt;article&gt; element from your site, display it in its own app, and have it make perfect sense to its readers.
-<br/>
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/html-article-element-82490e.png" width="400px">
+
 By Wrapping the blog post in an &lt;article&gt; element we are marking it as the main content of the page as a self-contained unit. Notice how we left the copyright notice outside the &lt;article&gt; element because it’s a footer for the entire site—not specifically for our article.
 <br/>
 &lt;article&gt;’s are essentially mini web pages in your HTML document. They have their own headers, footers, and document outline that are completely isolated from the rest of your site.
@@ -52,3 +54,11 @@ For things like blog posts, newspaper articles, or web pages dedicated to a sing
 ```
 
 This tells anybody looking at our page that there are three distinct articles that can be syndicated. Think of it as a way to merge multiple HTML files into a single document without confusing search engines, browsers, or other machines that are trying to parse our content.
+
+### Sections
+
+The &lt;section&gt; element is sort of like an &lt;article&gt;, except it doesn’t need to make sense outside the context of the document. That is, an app like Flipboard wouldn’t try to pull out all the &lt;section&gt;’s of your page and present them as independent pieces of content.
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/html-section-element-92a4d1.png" width="400px">
+
+Think of &lt;section&gt; as an explicit way to define the sections in a document outline. Why would we want this instead of letting the heading levels do it for us? Often times, you need a container to wrap a section for layout purposes, and it makes sense to use the more descriptive &lt;section&gt; element over a generic &lt;div&gt;.
