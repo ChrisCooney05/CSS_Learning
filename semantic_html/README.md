@@ -97,3 +97,11 @@ Conceptually, footers are basically the same as headers, except they generally c
 <img src="https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png" width="400px">
 
 Footers behave the same as &lt;header&gt; in that they’re associated with the nearest sectioning element. So, we can use it for our page’s copyright notice and the author information inside our &lt;article&gt;.
+
+### Asides
+
+Headers and footers are ways to add extra information to an article, but sometimes we want to remove information from an article. For example, a sponsored blog post might contain an advertisement about the sponsoring company; however, we probably don’t want to make it part of the article text. This is what the &lt;aside&gt; element is for.
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png" width="400px">
+
+Even though the image is inside the &lt;article&gt; element, machine readers know that it’s only tangentially related to the article content. In addition to advertisements, &lt;aside&gt; is also appropriate for highlighting definitions, stats, or quotations. If it looks different than the rest of the article, chances are it’s an aside. When used outside an &lt;article&gt;, an &lt;aside&gt; is associated with the page as a whole. This makes it a good choice for marking up a site-wide sidebar.
