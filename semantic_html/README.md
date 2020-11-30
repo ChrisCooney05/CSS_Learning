@@ -105,3 +105,21 @@ Headers and footers are ways to add extra information to an article, but sometim
 <img src="https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png" width="400px">
 
 Even though the image is inside the &lt;article&gt; element, machine readers know that it’s only tangentially related to the article content. In addition to advertisements, &lt;aside&gt; is also appropriate for highlighting definitions, stats, or quotations. If it looks different than the rest of the article, chances are it’s an aside. When used outside an &lt;article&gt;, an &lt;aside&gt; is associated with the page as a whole. This makes it a good choice for marking up a site-wide sidebar.
+
+### Divs for Layouts
+
+You should use semantic HTML whenever you can, since it helps machines infer the structure of your content, and it gives you a standardized vocabulary to organize your web pages. However, sometimes you need a container element when none of the semantic HTML elements we just covered would make sense. There’s nothing wrong with using a plain old &lt;div&gt; purely for layout purposes. The point is, don’t use semantic elements just for the sake of using them. Implementing them incorrectly is worse than not using them at all.
+
+### Date and Time
+
+The &lt;time&gt; element represents either a time of day or a calendar date. Providing a machine-readable date makes it possible for browsers to automatically link it to users’ calendars and helps search engines clearly identify specific dates. The machine-readable date is defined in the ```datetime``` attribute. An easy way to remember the date format is that it goes from largest time period to smallest: year, month, then date. Note that even though the year isn’t included in the human-readable text, this tells search engines that our article was published in 2017.
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/datetime-format-d0c825.png" width="400px">
+
+It’s possible to include times and time zones inside of datetime, too. If we wanted to add a 3:00pm PST time to our publish date, we’d use the following:
+
+```html
+<time datetime='2017-01-03 15:00-0800'>
+```
+
+The time itself is in 24-hour format, and the ```-0800``` is the time zone offset from GMT
