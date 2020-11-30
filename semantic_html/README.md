@@ -62,3 +62,14 @@ The &lt;section&gt; element is sort of like an &lt;article&gt;, except it doesn�
 <img src="https://www.internetingishard.com/html-and-css/semantic-html/html-section-element-92a4d1.png" width="400px">
 
 Think of &lt;section&gt; as an explicit way to define the sections in a document outline. Why would we want this instead of letting the heading levels do it for us? Often times, you need a container to wrap a section for layout purposes, and it makes sense to use the more descriptive &lt;section&gt; element over a generic &lt;div&gt;.
+<br/>
+By changing the last &lt;h2&gt; into a &lt;h6&gt; you might expect it to become part of the Footer section as its lower than the &lt;h3&gt; that proceeds it. But, that’s not the case. 
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/sections-and-document-outline-614f12.png" width="400px">
+
+By adding those &lt;section&gt; elements, we’re telling the document outline that it should be defined by the nesting structure of the &lt;section&gt; elements instead of the heading levels. This basically means that each &lt;section&gt; can have its own set of <h1> through <h6> headings that are independent of the rest of the page.
+<br/>
+However, you shouldn’t use the &lt;section&gt; element to manipulate the document outline in this way because browsers, screen readers, and some search engines don’t properly interpret the effect of &lt;section&gt; on the document outline. Instead, always define a page’s outline via heading levels, using &lt;section&gt; only as a replacement for container &lt;div&gt;’s when appropriate.
+Also note that each &lt;section&gt; element should contain at least one heading, otherwise it will add an “untitled section” to your document outline.
+<br/>
+As defined by the HTML5 specification, &lt;section&gt; is a pretty generic element. That, plus the fact that browsers and screen readers can’t properly interpret its role in document outlines makes it difficult to know when and how to leverage it properly. Only use &lt;section&gt; as a more descriptive &lt;Div&gt; wrapper for the implicitly defined sections of your page. Don’t use it for self-contained content (that’s what &lt;article&gt; is for) or when it’s purely for layout purposes.
