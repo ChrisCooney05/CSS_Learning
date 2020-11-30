@@ -89,3 +89,11 @@ The &lt;header&gt; element denotes introductory content for a section, article, 
 Headers are only associated with the nearest sectioning element—typically a &lt;body&gt;, &lt;section&gt;, or &lt;article&gt; element. This means that you can use multiple &lt;header&gt; elements to add introductory content to different parts of a document. For instance, the title, author, and publication date of our &lt;article&gt;
 <br/>
 Without this &lt;header&gt;, search engines and screen readers wouldn’t know that first &lt;p&gt; was separate from the main content of the article. Like &lt;section&gt;, it also serves as a convenient CSS hook, since the title and author info for a blog post are often styled differently than the rest of the article. Again, think of &lt;header&gt; as a more semantic alternative to a &lt;div&gt; container.
+
+### Footers
+
+Conceptually, footers are basically the same as headers, except they generally come at end of an article/website opposed to the beginning. Common use cases include things like copyright notices, footer navigation, and author bios at the end of blog posts.
+
+<img src="https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png" width="400px">
+
+Footers behave the same as &lt;header&gt; in that they’re associated with the nearest sectioning element. So, we can use it for our page’s copyright notice and the author information inside our &lt;article&gt;.
