@@ -122,4 +122,10 @@ It’s possible to include times and time zones inside of datetime, too. If we w
 <time datetime='2017-01-03 15:00-0800'>
 ```
 
-The time itself is in 24-hour format, and the ```-0800``` is the time zone offset from GMT
+The time itself is in 24-hour format, and the ```-0800``` is the time zone offset from GMT.
+
+### Addresses 
+
+The &lt;address&gt; element is like &lt;time&gt; in that it doesn’t deal with the overall structure of a document, but rather embellishes the parent &lt;article&gt; or &lt;body&gt; element with some metadata. It defines contact information for the author of the article or web page in question. &lt;address&gt; should not be used for arbitrary physical addresses.
+<br/>
+By default, these will be styled the same way as &lt;em&gt;.
