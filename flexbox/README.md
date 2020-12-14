@@ -109,3 +109,7 @@ By removing the div containing the `.signup` and `.login` elements, everything i
 - Use `flex` to create flexible boxes that can stretch and shrink.
 
 ### Extra - align-content vs align-items
+
+The effect of both `align-items` and `align-content` is visible along the cross-axis. However, the `align-content` property is relevant only if your flex-container is set to `wrap`. In other words, unless you have more than one flex line, you do not need the `align-content` property. `align-content` treats all the lines as one item, so whilst `align-items: center` may leave lots of space between two lines, using `align-content` will help remove that.
+<br/>
+[this video](https://www.youtube.com/watch?v=UuiImHywwvs) shows that well
