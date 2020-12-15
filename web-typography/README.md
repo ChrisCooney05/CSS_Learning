@@ -14,3 +14,15 @@ This resulted in the [“Bulletproof @font-face syntax”](https://www.paulirish
 ### WOFF fonts
 
 The industry has standardized on the Web Open Font Format (WOFF), so things have gotten a little bit simpler for us. Over 98% of modern browsers support .woff fonts, and over 95% for .woff2.
+
+### Locally Hosted Web Fonts
+
+There are two distinct methods of adding web fonts to your website: locally hosted or externally hosted. To add a locally hosted web font there are three steps:
+
+- Download a web font and add it to your project.
+- Embed the web font in your stylesheet.
+- Use the font elsewhere in your stylesheet.
+
+### Embedding A Web Font
+
+We’ve got a WOFF file. To actually use it in our web page, we need to embed it into our stylesheet with the `@font-face` “at-rule”. Web fonts must always be included at the top of a stylesheet
